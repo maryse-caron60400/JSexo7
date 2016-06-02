@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button id="valider" name="valider" onclick="resultat()">Valider</button>
+        </form>
+        <script>
+        function calcul(){
+          var pointure = document.getElementById("pointure").value;
+          var annee = document.getElementById("annee").value;
+          if(isNaN(pointure) || isNaN(annee)) {
+            return "erreur";
+          }
+          else{
+            pointure = parseInt(pointure);
+            annee = parseInt(annee);
+            var a = pointure * 2;
+            var b = a + 5;
+            var c = b * 50;
+            var d = c - annee;
+            var resultat = d + 1766;
+            return resultat;
+          }
+        }
+        function resultat(){
+          alert(calcul());
+        }
+        </script>
+    </body>
+</html>
